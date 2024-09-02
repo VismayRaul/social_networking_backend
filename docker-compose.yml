@@ -1,0 +1,15 @@
+version: '3.7'
+
+services:
+  social_networking_backend:
+    build: .
+    command: sh -c "python manage.py makemigrations && python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
+    container_name: social_networking_backend
+    volumes:
+      - .:/social_networking_backend
+      - db_data:/app/db.sqlite3
+    ports:
+      - "8000:8000"
+      
+volumes:
+  db_data:
