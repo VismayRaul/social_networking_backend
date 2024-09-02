@@ -1,6 +1,6 @@
 # Social Networking Backend
 
-This is a social networking backend application built using Django and Django REST Framework (DRF) with JWT authentication. The backend includes features for user authentication, searching users, managing friend requests, and more. The project uses Docker to simplify the setup process.
+This is a social networking backend application built using Django and Django REST Framework (DRF) with JWT authentication. The backend includes features for user authentication, searching users, managing friend requests, and more. The project uses Docker to simplify the setup process.This project includes a Postman collection for testing the application. You can import the collection into Postman to test the application's REST API.
 
 ## Features
 
@@ -35,6 +35,4 @@ Clone the project to your local machine using the following command:
 ```bash
 git clone https://github.com/VismayRaul/social_networking_backend.git
 cd social_networking_backend
-docker-compose up #command to run the project```
-
-(**Note**: Postman collection for testing is provided in the project file itself.)
+docker-compose up #command to run the project
