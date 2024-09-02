@@ -50,15 +50,15 @@ class UserSearchView(generics.ListAPIView):
     permission_classes = [IsAuthenticated]
 
     def get_queryset(self):
-        # Extract the search query from the request parameters
+        # Extract the search query from the request parameters for email or username
         search_query = self.request.query_params.get('search', '').strip().lower()
 
         if search_query:
-            # Search by exact email or partial name
             return User.objects.filter(
                 Q(email__iexact=search_query) | Q(email__icontains=search_query) | Q(username__icontains=search_query)
             )
-        return User.objects.none()  # Return empty if no search query is provided
+        return User.objects.none()
+    
 # Throttle class to limit sending of friend requests (3 requests per minute)
 class FriendRequestRateThrottle(UserRateThrottle):
     rate = '3/min'
