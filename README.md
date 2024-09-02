@@ -1,35 +1,40 @@
 # Social Networking Backend
 
-This is a social networking backend built using Django and Django REST Framework (DRF) with JWT authentication. The application uses Docker for easy setup and deployment.
+This is a social networking backend application built using Django and Django REST Framework (DRF) with JWT authentication. The backend includes features for user authentication, searching users, managing friend requests, and more. The project uses Docker to simplify the setup process.
 
 ## Features
 
-- User signup with username, email, and password.
-- User login with JWT-based authentication.
-- Case-insensitive email handling during login.
-- Protected endpoints accessible only to authenticated users.
-- Search for users by email and name.
-- Friend request management (send, accept, reject).
-- Rate-limiting to prevent spamming friend requests.
-- Persistent data storage using SQLite (or PostgreSQL if defined).
+- **User Authentication**: Signup and login functionalities with JWT tokens.
+- **Email Case-Insensitive Login**: Allows users to login without worrying about email case sensitivity.
+- **User Search**: Search users by email or username with pagination support.
+- **Friend Request Management**: Send, accept, or reject friend requests.
+- **Rate Limiting**: Limits the number of friend requests sent within a specific time frame.
+- **Persistent Data Storage**: Uses SQLite for development.
 
 ## Technologies Used
 
-- **Django**: Python web framework.
+- **Django**: Web framework for building the backend.
 - **Django REST Framework**: For building RESTful APIs.
-- **Simple JWT**: For handling authentication using JSON Web Tokens.
-- **Docker**: For containerization and easy setup.
-- **SQLite**: Default database for development (can be switched to PostgreSQL or other databases).
+- **Simple JWT**: For handling JSON Web Token (JWT) authentication.
+- **Docker**: For containerizing the application to simplify setup and deployment.
+- **SQLite**: Default database for development.
 
 ## Prerequisites
 
-- Docker and Docker Compose installed on your machine.
-- Basic knowledge of Docker, Django, and REST APIs.
+Before you begin, ensure you have the following software installed on your machine:
 
-## Getting Started
+- **Docker**: [Install Docker](https://docs.docker.com/get-docker/)
+- **Docker Compose**: Comes with Docker Desktop for Windows and Mac. For Linux, install it separately: [Install Docker Compose](https://docs.docker.com/compose/install/)
+
+## Installation Guide
 
 ### 1. Clone the Repository
 
+Clone the project to your local machine using the following command:
+
 ```bash
-git clone https://github.com/yourusername/social-networking-backend.git
-cd social-networking-backend
+git clone https://github.com/VismayRaul/social_networking_backend.git
+cd social_networking_backend
+docker-compose up #command to run the project
+
+(**Note**: Postman collection for testing is provided in the project file itself.)
