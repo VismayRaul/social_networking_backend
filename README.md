@@ -35,6 +35,6 @@ Clone the project to your local machine using the following command:
 ```bash
 git clone https://github.com/VismayRaul/social_networking_backend.git
 cd social_networking_backend
-docker-compose up #command to run the project
+docker-compose up #command to run the project```
 
 (**Note**: Postman collection for testing is provided in the project file itself.)
